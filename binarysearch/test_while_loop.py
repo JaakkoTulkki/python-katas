@@ -2,8 +2,9 @@ from .while_loop import chop
 import unittest
 
 
-class TestRecursive(unittest.TestCase):
-    def test_recursive(self):
+class TestWhile(unittest.TestCase):
+
+    def test_while(self):
         self.assertEqual(-1, chop(3, []))
         self.assertEqual(-1, chop(3, [1]))
         self.assertEqual(0, chop(1, [1]))
