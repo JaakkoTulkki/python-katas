@@ -20,3 +20,10 @@ class TestDataStuff(unittest.TestCase):
         data = self.weather.open_file()
         self.assertTrue(isinstance(data, list), data)
         self.assertTrue(data)
+
+    def test_finds_the_day_with_smallest_spread(self):
+        data = [[], [1, 10, 1], [2, 3, 2], ""]
+        self.weather.data = data
+        result = self.weather.get_smallest_spread(data)
+        self.assertEqual(result, ([2, 3, 2], 1))
+
